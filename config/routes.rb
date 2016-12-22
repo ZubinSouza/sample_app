@@ -7,7 +7,7 @@ SampleApp::Application.routes.draw do
   match 'help',    to: 'static_pages#help'
   match '/signin',    to: 'sessions#new'
   match '/signup', to: 'users#new'
-  match '/signout', to: 'users#destroy'
+  match '/signout', to: 'sessions#destroy'
   match 'contact', to: 'static_pages#contact', via: :delete 
   
   root to: 'static_pages#home'
